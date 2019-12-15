@@ -28,6 +28,7 @@ public class BillController {
     @Autowired
     private BillService billService;
     
+    //Method use for create invoice
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<Object> createInvoice(@RequestBody Bill billRequest) {
        if (billRequest.getPurchaseItmes() == null || billRequest.getPurchaseItmes().size() == 0) {
